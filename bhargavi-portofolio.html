@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhargavi Bandi | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0615;--card:#171026;--accent:#a855f7;--accent2:#7c3aed;--text:#fff}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text)}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:18px 8%;background:rgba(11,6,21,.85);backdrop-filter:blur(10px);z-index:1000}
+nav a{color:#fff;text-decoration:none;margin-left:18px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;background:radial-gradient(circle at top,#7c3aed,#0b0615 60%)}
+.hero h1{font-size:4rem}
+.hero p{max-width:700px;margin:20px auto}
+.btn{display:inline-block;padding:14px 22px;background:linear-gradient(45deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;border-radius:10px}
+section{padding:90px 8%}
+h2{margin-bottom:25px;font-size:2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);padding:24px;border-radius:18px;transition:.3s}
+.card:hover{transform:translateY(-6px)}
+.skills span{display:inline-block;padding:8px 14px;margin:6px;background:#24193d;border-radius:999px}
+footer{text-align:center;padding:30px}
+.light{--bg:#f7f7fb;--card:#ffffff;--text:#111}
+.toggle{cursor:pointer}
+.reveal{opacity:0;transform:translateY(25px);transition:1s}
+.reveal.show{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<nav>
+<div><b>Bhargavi Bandi</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+<span class="toggle" onclick="document.body.classList.toggle('light')">🌓</span>
+</div>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Bhargavi Bandi</h1>
+<h3>Software Engineer | B.Tech IT Student</h3>
+<p>Passionate about Software Development, AI, Cybersecurity and building impactful digital experiences.</p>
+<a class="btn" href="#">Download Resume</a>
+</div>
+</section>
+
+<section id="about" class="reveal">
+<h2>About Me</h2>
+<div class="card">
+I am a B.Tech Information Technology student passionate about software development, AI, and cybersecurity. I enjoy building innovative projects and continuously learning new technologies. I aspire to build impactful software solutions as a Software Engineer.
+</div>
+</section>
+
+<section class="reveal">
+<h2>Education & Experience</h2>
+<div class="grid">
+<div class="card">
+<h3>B.Tech IT</h3>
+<p>Anil Neerukonda Institute of Technology and Sciences</p>
+<p>Graduation: 2027</p>
+<p>CGPA: 8.34 / 10</p>
+</div>
+<div class="card">
+<h3>IBM Cybersecurity Internship</h3>
+<p>Cybersecurity fundamentals, threat analysis, and security best practices.</p>
+</div>
+</div>
+</section>
+
+<section id="skills" class="reveal">
+<h2>Skills</h2>
+<div class="card skills">
+<span>Java</span><span>Python</span><span>SQL</span><span>HTML</span>
+<span>CSS</span><span>JavaScript</span><span>Git</span><span>GitHub</span>
+<span>Android Studio</span><span>DBMS</span>
+</div>
+</section>
+
+<section id="projects" class="reveal">
+<h2>Featured Projects</h2>
+<div class="grid">
+<div class="card"><h3>Aura-H</h3><p>Smart wellness and activity tracking application built using Kotlin and Jetpack Compose.</p></div>
+<div class="card"><h3>BlinkEats</h3><p>Food ordering and delivery platform developed as a team project.</p></div>
+<div class="card"><h3>Portfolio Website</h3><p>Modern responsive portfolio with dark mode and animations.</p></div>
+</div>
+</section>
+
+<section id="contact" class="reveal">
+<h2>Contact</h2>
+<div class="card">
+<p>Email: bhargavib1910@gmail.com</p>
+<p>Location: Vizianagaram, Andhra Pradesh, India</p>
+<p>GitHub: github.com/Bhargavi-codes1910</p>
+<p>LinkedIn: linkedin.com/in/bhargavi-bandi-01a19339a</p>
+</div>
+</section>
+
+<footer>© 2026 Bhargavi Bandi</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
